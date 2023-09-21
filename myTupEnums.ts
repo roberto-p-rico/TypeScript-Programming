@@ -10,4 +10,3 @@ type User = [number, string]
 const newUser: User = [112, "example@google.com"]
 
 newUser[1] = "RR.com"
-newUser.push(true)

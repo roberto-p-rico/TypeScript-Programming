@@ -24,4 +24,50 @@ interface Bootle {
     type: number
 }
 
-identityFour<Bootle>({})
+// identityFour<Bootle>({})
+
+function getSearchProducts<T>(products: T[]): T {
+    // dp spme database operations
+    const myIndex = 3
+    return products[3]
+}
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+    // do some database operations
+    const myIndex = 4
+    return products[myIndex]
+}
+
+interface Database {
+    coneections: string,
+    username: string,
+    password: string
+}
+
+function anotherFunction<T, U extends Database>(valOne:T, valTwo:U):object {
+    return {
+        valOne,
+        valTwo
+    }
+}
+
+// anotherFunction(3, {})
+
+interface Quiz{
+    name: string,
+    type: string,
+}
+
+interface Course{
+    name: string,
+    author: string,
+    subject: string
+}
+
+class Sellable<T>{
+    public cart: T[] = []
+
+    addToCart(product: T){
+        this.cart.push(product)
+    }
+}
